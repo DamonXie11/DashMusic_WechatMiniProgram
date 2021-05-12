@@ -1,0 +1,86 @@
+/* pages/index/index.wxss */
+.banners{
+  width: 100%;
+  height: 300rpx;
+}
+
+.banners image{
+  width: 100%;
+  height: 100%;
+}
+
+/*导航样式*/
+.navContainer{
+  display: flex;
+
+}
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.iconfont{
+  height: 100rpx;
+  width: 100rpx;
+  margin: 20rpx 0;
+  font-size: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+  border-radius: 50%;
+  background-color: rgb(240, 19, 9);
+  color: #fff;
+}
+
+.navItem text:nth-last-child(1){
+  font-size: 26rpx;
+}
+
+/*为尼玛精心推荐*/
+.recommendContainer{
+  padding: 20rpx;
+}
+
+.recommendContainer .header .tittle{
+  font-size: 20rpx;
+  color: #9f9f9f;
+}
+
+.recommendContainer .header .recommendMore{
+  font-size: 18rpx;
+  padding: 4rpx 8rpx;
+  color: #333;
+  border: 1rpx solid #333;
+  border-radius: 20rpx;
+  float: right;
+}
+
+/*内容*/
+.recommendScroll{
+  display: flex;
+  margin-top: 20rpx;
+  height: 300rpx;
+}
+.scrollItem{
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.scrollItem text{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  width: 200rpx;
+  text-overflow: ellipsis;
+  font-size: 25rpx;
+}
+/*排行榜*/
+.topList{
+  padding: 0 20rpx;
+}

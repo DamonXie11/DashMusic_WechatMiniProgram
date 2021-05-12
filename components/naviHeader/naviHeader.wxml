@@ -1,0 +1,7 @@
+<view class="header">
+    <text class="tittle">{{tittle}}</text>
+    <view>
+        <text>{{navi}}</text>
+        <text class="recommendMore">查看更多</text>
+    </view>
+</view>

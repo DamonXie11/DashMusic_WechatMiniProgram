@@ -1,0 +1,13 @@
+.header .tittle{
+  font-size: 20rpx;
+  color: #9f9f9f;
+}
+
+.header .recommendMore{
+  font-size: 18rpx;
+  padding: 4rpx 8rpx;
+  color: #333;
+  border: 1rpx solid #333;
+  border-radius: 20rpx;
+  float: right;
+}
