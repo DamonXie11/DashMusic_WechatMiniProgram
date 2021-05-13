@@ -9,6 +9,7 @@ Page({
     data: {
         bannerList:[],
         recommendList:[],
+        topList:[],
     },
 
     /**
@@ -29,11 +30,25 @@ Page({
         // })
         let bannerData = await request("/banner", {type: 2});
         let recommendData = await request("/personalized", {limit: 10})
-        console.log(recommendData)
+
         this.setData({
             bannerList: bannerData.banners,
             recommendList: recommendData.result,
         })
+
+        let index = 0;
+        let topListFinal = [];
+        while(index<5) {
+            let topData = await request("/top/list", {idx: index++})
+            let topListItem = { name: topData.playlist.name, tracks: topData.playlist.tracks.slice(0,3)}
+            topListFinal.push(topListItem);
+            this.setData({
+                topList: topListFinal,
+            })
+        }
+        // console.log(topList)
+
+
     },
 
     /**

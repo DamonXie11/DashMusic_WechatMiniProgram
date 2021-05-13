@@ -1,7 +1,7 @@
 <view class="indexContainer">
   <!-- 轮播图 -->
-  <swiper class="banners" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33" circular>
-    <swiper-item wx:key="index" wx:for="{{bannerList}}">
+  <swiper class="banners" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33" circular autoplay>
+    <swiper-item class="bannersItem" wx:key="index" wx:for="{{bannerList}}">
       <image src="{{item.pic}}"></image>
     </swiper-item>
 
@@ -50,6 +50,22 @@
     <!--头部-->
     <naviHeader tittle="排行榜" navi="热歌风向榜"></naviHeader>
     <!--内容-->
+    <swiper class="topListSwiper" next-margin="40rpx" >
+      <swiper-item wx:for="{{topList}}" wx:key="name" wx:for-item="topListItem">
+        <view class="swiperItem">
+          <view class="tittle">{{topListItem.name}}</view>
+          <view class="musicItem" wx:for="{{topListItem.tracks}}" wx:key="id" wx:for-index="topListMusicIndex" wx:for-item="topListMusicItem">
+            <image src="{{topListMusicItem.al.picUrl}}"></image>
+            <text class="order">{{topListMusicIndex+1}}</text>
+            <view class="musicDetail">
+              <text class="musicName">{{topListMusicItem.name}}</text>
+              <text class="musicSinger">{{topListMusicItem.ar[0].name}}</text>
+            </view>
+
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
   </view>
 
 

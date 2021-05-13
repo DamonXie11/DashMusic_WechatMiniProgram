@@ -1,13 +1,41 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/login/login",
+    "pages/video/video"
   ],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#d43c33",
     "navigationBarTitleText": "DashMusic",
     "navigationBarTextStyle": "white"
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#d43c33",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/static/images/tabs/tab-home.png",
+        "selectedIconPath": "/static/images/tabs/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "播客",
+        "iconPath": "/static/images/tabs/tab-cate.png",
+        "selectedIconPath": "/static/images/tabs/tab-cate-current.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "个人中心",
+        "iconPath": "/static/images/tabs/tab-my.png",
+        "selectedIconPath": "/static/images/tabs/tab-my-current.png"
+      }
+    ]
+  }
 }

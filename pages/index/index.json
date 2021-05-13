@@ -1,7 +1,5 @@
 {
   "usingComponents": {
-    "naviHeader": "/components/naviHeader/naviHeader",
-    "naviHeader": "/components/naviHeader/naviHeader",
     "naviHeader": "/components/naviHeader/naviHeader"
   }
 }

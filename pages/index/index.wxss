@@ -1,27 +1,28 @@
 /* pages/index/index.wxss */
-.banners{
+.banners {
   width: 100%;
   height: 300rpx;
 }
 
-.banners image{
+.banners image {
   width: 100%;
   height: 100%;
 }
 
 /*导航样式*/
-.navContainer{
+.navContainer {
   display: flex;
 
 }
-.navItem{
+
+.navItem {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 20%;
 }
 
-.iconfont{
+.iconfont {
   height: 100rpx;
   width: 100rpx;
   margin: 20rpx 0;
@@ -33,21 +34,21 @@
   color: #fff;
 }
 
-.navItem text:nth-last-child(1){
+.navItem text:nth-last-child(1) {
   font-size: 26rpx;
 }
 
 /*为尼玛精心推荐*/
-.recommendContainer{
+.recommendContainer {
   padding: 20rpx;
 }
 
-.recommendContainer .header .tittle{
+.recommendContainer .header .tittle {
   font-size: 20rpx;
   color: #9f9f9f;
 }
 
-.recommendContainer .header .recommendMore{
+.recommendContainer .header .recommendMore {
   font-size: 18rpx;
   padding: 4rpx 8rpx;
   color: #333;
@@ -57,21 +58,24 @@
 }
 
 /*内容*/
-.recommendScroll{
+.recommendScroll {
   display: flex;
   margin-top: 20rpx;
   height: 300rpx;
 }
-.scrollItem{
+
+.scrollItem {
   width: 200rpx;
   margin-right: 20rpx;
 }
+
 .scrollItem image {
   width: 200rpx;
   height: 200rpx;
   border-radius: 10rpx;
 }
-.scrollItem text{
+
+.scrollItem text {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -80,7 +84,61 @@
   text-overflow: ellipsis;
   font-size: 25rpx;
 }
+
 /*排行榜*/
-.topList{
+.topList {
   padding: 0 20rpx;
+}
+
+.topListSwiper{
+  height: 450rpx;
+}
+
+.swiperItem{
+  width: 93%;
+  border-radius: 8rpx;
+  padding-left: 20rpx;
+  background-color: #fdfdfd;
+}
+
+.topList .swiperItem .tittle {
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+
+.musicItem {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.topList .swiperItem .musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 8rpx;
+}
+
+.topList .swiperItem .musicItem .order {
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.musicDetail{
+  display: flex;
+  flex-direction: column;
+}
+
+.topList .swiperItem .musicItem .musicName {
+  line-height: 60rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topList .swiperItem .musicItem .musicSinger {
+  font-size: 18rpx;
+  color: #4e4e4e;
 }

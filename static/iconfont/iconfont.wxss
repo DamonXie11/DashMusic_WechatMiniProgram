@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2543312 */
-  src: url('//at.alicdn.com/t/font_2543312_xef3mlgwt2.woff2?t=1620803090151') format('woff2'),
-  url('//at.alicdn.com/t/font_2543312_xef3mlgwt2.woff?t=1620803090151') format('woff'),
-  url('//at.alicdn.com/t/font_2543312_xef3mlgwt2.ttf?t=1620803090151') format('truetype');
+  src: url('//at.alicdn.com/t/font_2543312_355435c4cr.woff2?t=1620900075937') format('woff2'),
+  url('//at.alicdn.com/t/font_2543312_355435c4cr.woff?t=1620900075937') format('woff'),
+  url('//at.alicdn.com/t/font_2543312_355435c4cr.ttf?t=1620900075937') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,26 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bianzu11:before {
+  content: "\e660";
+}
+
+.icon-gerenzhongxin:before {
+  content: "\e62a";
+}
+
+.icon-xiaoxi:before {
+  content: "\e618";
+}
+
+.icon-pifugexinghuazhuti-xianxing:before {
+  content: "\e7e8";
+}
+
+.icon-haoyou:before {
+  content: "\e628";
 }
 
 .icon-paixingbang:before {
