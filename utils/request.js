@@ -10,8 +10,17 @@ export default (url, data = {}, method = 'GET') => {
             url: config.mobileHost + url,
             data,
             method,
+            header: {
+              cookie: wx.getStorageSync('cookies')?wx.getStorageSync('cookies').find(item => item.indexOf('MUSIC_U') !== -1):''
+            },
             success: (res) => {
                 console.log("success", res);
+                if(data.isLogin) { //登录请求
+                    wx.setStorage({
+                        key: 'cookies',
+                        data: res.cookies,
+                    })
+                }
                 resolve(res.data);
             },
             fail: (err) => {

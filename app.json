@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/video/video",
     "pages/index/index",
     "pages/profile/profile",
-    "pages/login/login",
-    "pages/video/video"
+    "pages/login/login"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap.json",

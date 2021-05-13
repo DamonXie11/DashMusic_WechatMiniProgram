@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2543312 */
-  src: url('//at.alicdn.com/t/font_2543312_355435c4cr.woff2?t=1620900075937') format('woff2'),
-  url('//at.alicdn.com/t/font_2543312_355435c4cr.woff?t=1620900075937') format('woff'),
-  url('//at.alicdn.com/t/font_2543312_355435c4cr.ttf?t=1620900075937') format('truetype');
+  src: url('//at.alicdn.com/t/font_2543312_9flvsxr0sxa.woff2?t=1620972789530') format('woff2'),
+  url('//at.alicdn.com/t/font_2543312_9flvsxr0sxa.woff?t=1620972789530') format('woff'),
+  url('//at.alicdn.com/t/font_2543312_9flvsxr0sxa.ttf?t=1620972789530') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,30 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zan1:before {
+  content: "\e622";
+}
+
+.icon-fenxiang:before {
+  content: "\e626";
+}
+
+.icon-pinglun:before {
+  content: "\e64b";
+}
+
+.icon-zan:before {
+  content: "\e61f";
+}
+
+.icon-xiangyou1:before {
+  content: "\e638";
+}
+
+.icon-xiangyou:before {
+  content: "\e666";
 }
 
 .icon-bianzu11:before {
