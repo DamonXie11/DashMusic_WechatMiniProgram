@@ -1,0 +1,41 @@
+<view class="musicDetailContianer">
+  <view class="bg .bg_image" style="background-image:url('{{song.al.picUrl}}'); "></view>
+  <view class="songName">{{song.name}}</view>
+  <view>
+    <text class="singer" wx:for="{{song.ar}}"
+          wx:key="id">{{index !== song.ar.length - 1 ? item.name + '/' : item.name}}</text>
+  </view>
+
+  <view class="circle"></view>
+  <image class="needle {{isPlay?'needleRotated':''}}" src="/static/images/song/needle.png"></image>
+
+  <view class="discContianer {{isPlay?'disAnimate':''}}">
+    <image class="disc" src="/static/images/song/disc.png"></image>
+    <image class="songCover" src="{{song.al.picUrl}}"></image>
+  </view>
+
+  <!--进度条区域-->
+  <view class="progressControl">
+    <text>{{currentTime}}</text>
+    <view class="barControl">
+      <!--实时进度条-->
+      <view class="song-current-bar" style="width:{{currentWidth + 'rpx'}};">
+        <!--dot-->
+        <view class="circle"></view>
+      </view>
+    </view>
+    <text>{{totalTime}}</text>
+  </view>
+
+  <!--底部控制播放区域-->
+  <view class="musicControl">
+    <text class="iconfont icon-suijibofang"></text>
+
+    <text class="iconfont icon-48shangyishou" id="pre" bindtap="handleSwitch"></text>
+    <text class="iconfont big {{isPlay?'icon-stop':'icon-bofang'}}" bindtap="handlePlay"></text>
+
+    <text class="iconfont icon-49xiayishou" id="next" bindtap="handleSwitch"></text>
+
+    <text class="iconfont icon-liebiao"></text>
+  </view>
+</view>

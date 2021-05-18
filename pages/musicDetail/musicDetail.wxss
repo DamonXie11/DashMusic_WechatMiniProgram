@@ -1,0 +1,179 @@
+.musicDetailContianer {
+  height: 100vh;
+  background-color: rgba(165, 128, 128, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.bg_image {
+  -webkit-filter: blur(15rpx);
+  -moz-filter: blur(15rpx);
+  -o-filter: blur(15rpx);
+  -ms-filter: blur(15rpx);
+  filter: blur(15rpx);
+  background-repeat: no-repeat;
+  /*background-size: 100%;*/
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.musicDetailContianer .songName {
+  margin-top: 20rpx;
+  text-align: center;
+  width: 600rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  font-size: 40rpx;
+}
+
+.musicDetailContianer .singer {
+  display: inline;
+  width: 600rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.circle {
+  position: relative;
+  width: 60rpx;
+  height: 60rpx;
+  z-index: 5;
+  background-color: #fff;
+  margin: 10rpx 0;
+  border-radius: 50%;
+}
+
+.needle {
+  position: relative;
+  top: -40rpx;
+  z-index: 3;
+  left: 55rpx;
+  width: 192rpx;
+  height: 274rpx;
+  transform-origin: 40rpx 0;
+  transform: rotate(-30deg);
+  transition: 1s;
+}
+
+.needleRotated {
+  transform: rotate(0deg);
+}
+
+.discContianer {
+  position: relative;
+  top: -170rpx;
+  width: 598rpx;
+  height: 598rpx;
+}
+
+.disAnimate {
+  animation: disc 5s linear infinite;
+  animation-delay: 1s;
+}
+
+/**
+  用来设置动画帧
+    1.from to
+      适用于简单的动画只有起始帧和结束帧
+    2.百分比
+      用于复杂的，通常不只两针
+ */
+@keyframes disc {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.discContianer .disc {
+  width: 100%;
+  height: 100%;
+}
+
+.songCover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  /*width: 370rpx;*/
+  width: 350rpx;
+  height: 350rpx;
+  /*height: 370rpx;*/
+  border-radius: 50%;
+}
+
+/*底部控制区域*/
+.musicControl {
+  position: absolute;
+  left: 0;
+  bottom: 40rpx;
+  width: 100%;
+  display: flex;
+
+}
+
+.musicControl text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: aliceblue;
+  font-size: 50rpx;
+}
+
+.musicControl text.big {
+  font-size: 120rpx;
+}
+
+/*进度条*/
+.progressControl{
+  position: absolute;
+  bottom: 200rpx;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+.barControl{
+  position: relative;
+  margin: auto;
+  width: 450rpx;
+  height: 4rpx;
+  opacity: 0.5;
+  background-color: aliceblue;
+}
+.song-current-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 4rpx;
+  background-color: red;
+}
+.song-current-bar .circle{
+  position: absolute;
+  right: -12rpx;
+  top: -14rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}

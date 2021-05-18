@@ -30,7 +30,13 @@
   </scroll-view>
 
   <!--视频列表区域-->
-  <scroll-view class="videoScroll" scroll-y>
+  <scroll-view
+      class="videoScroll"
+      refresher-enabled
+      bindrefresherrefresh="handleRefresh"
+      refresher-triggered="{{isTriggered}}"
+      bindscrolltolower="handleTolower"
+      scroll-y>
     <view
         class="videoItem"
         wx:for="{{videoInoList}}"

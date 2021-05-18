@@ -1,4 +1,5 @@
 {
   "usingComponents": {},
-  "navigationBarTitleText": "Dash视频"
+  "navigationBarTitleText": "Dash视频",
+  "enablePullDownRefresh": true
 }

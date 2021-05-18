@@ -12,13 +12,29 @@ Page({
     videoInoList: [],
     videoId: '',
     videoUpdateTime: [],
+    isTriggered: false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //判断用户是否登录
+    let userInfo = wx.getStorageSync('userInfo')
+    if (!userInfo) {
+      wx.showToast({
+        title: "尼玛先登录",
+        icon: "none",
+        success: () => {
+          //跳转至登录界面
+          wx.reLaunch({
+            url: '/pages/login/login'
+          })
+        }
+      })
+    }
     this.getVideoList();
+
   },
 
   //获取导航数据
@@ -36,6 +52,7 @@ Page({
     let videoInfoListData = await request("/video/group", {id: navId})
     //关闭消息提示框
     wx.hideLoading()
+
     let index = 0;
     let videoList = videoInfoListData.datas.map(item => {
       item.id = index++;
@@ -43,6 +60,7 @@ Page({
     })
     this.setData({
       videoInoList: videoInfoListData.datas,
+      isTriggered: false,//关闭下拉刷新
     })
   },
 
@@ -80,7 +98,7 @@ Page({
     let {videoUpdateTime} = this.data
     let videoItem = videoUpdateTime.find(item => item.vid === vId)
 
-    if(videoItem){
+    if (videoItem) {
       this.videoContext.seek(videoItem.currentTime)
     }
 
@@ -111,13 +129,31 @@ Page({
   },
 
   //视频播放结束调用
-  handleEnded(e){
+  handleEnded(e) {
     //移出存在data里面已经播放完的数据
     let {videoUpdateTime} = this.data;
 
-    videoUpdateTime.splice(videoUpdateTime.findIndex(item => item.vid === e.currentTarget.id),1)
+    videoUpdateTime.splice(videoUpdateTime.findIndex(item => item.vid === e.currentTarget.id), 1)
     this.setData({
       videoUpdateTime
+    })
+  },
+
+  //自定义下拉刷新，针对scrollView
+  handleRefresh() {
+    this.getVideoInfoList(this.data.navId);
+  },
+
+  //自定义上拉触底的回调,针对scrollView
+  handleTolower(){
+    //数据分页效果
+    // 后端分页  前端分页
+
+    let newList = this.data.videoInoList;
+    let {videoInoList} = this.data;
+    videoInoList.push(...newList);
+    this.setData({
+      videoInoList,
     })
   },
 
@@ -153,7 +189,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    console.log("shuxin")
   },
 
   /**
@@ -166,7 +202,9 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function ({from}) {
+    return{
 
+    }
   }
 })
