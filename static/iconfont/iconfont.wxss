@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 2543312 */
-  src: url('//at.alicdn.com/t/font_2543312_s9yk5nfjyyb.woff2?t=1621307666996') format('woff2'),
-  url('//at.alicdn.com/t/font_2543312_s9yk5nfjyyb.woff?t=1621307666996') format('woff'),
-  url('//at.alicdn.com/t/font_2543312_s9yk5nfjyyb.ttf?t=1621307666996') format('truetype');
+  src: url('//at.alicdn.com/t/font_2543312_us2alt4x2md.woff2?t=1621410003857') format('woff2'),
+  url('//at.alicdn.com/t/font_2543312_us2alt4x2md.woff?t=1621410003857') format('woff'),
+  url('//at.alicdn.com/t/font_2543312_us2alt4x2md.ttf?t=1621410003857') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,30 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shanchu:before {
+  content: "\e614";
+}
+
+.icon-zuixin:before {
+  content: "\e639";
+}
+
+.icon-new:before {
+  content: "\e6e3";
+}
+
+.icon-web-icon-:before {
+  content: "\e6db";
+}
+
+.icon-hot:before {
+  content: "\e60e";
+}
+
+.icon-sousuo:before {
+  content: "\e604";
 }
 
 .icon-48shangyishou:before {

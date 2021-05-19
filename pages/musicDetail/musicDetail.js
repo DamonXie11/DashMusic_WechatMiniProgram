@@ -56,6 +56,18 @@ Page({
 
     });
 
+    //监听音乐播放自然结束
+    this.backgroundAudioMannager.onEnded(()=>{
+      //自动切换下一首有播放
+      PubSub.publish('switchType', 'next')
+
+      //将实时进度条的长度值为零
+      this.setData({
+        currentTime: '00:00',
+        currentWidth:0,
+      })
+    })
+
     //监听音频实时播放进度
     this.backgroundAudioMannager.onTimeUpdate(() => {
       //格式化实时不播放时间

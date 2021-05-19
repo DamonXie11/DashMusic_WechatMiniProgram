@@ -94,6 +94,15 @@ Page({
       recentPlayList,
     })
   },
+  noTap(){
+    wx.showModal({
+      title:'我看你手贱',
+      content:'不要看了，滚吧！',
+      confirmText:'自愿退下',
+      showCancel:false,
+      confirmColor:'#d43c33'
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
